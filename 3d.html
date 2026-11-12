@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D General | Abubakar Hadun</title>
+<meta name="description" content="Portofolio 3D Abubakar Hadun: arsitektur, lingkungan game, catur 3D, dan eksperimen gaya render.">
+<meta name="theme-color" content="#2b1f6e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="3D General | Abubakar Hadun">
+<meta property="og:description" content="Portofolio 3D Abubakar Hadun: arsitektur, lingkungan game, catur 3D, dan eksperimen gaya render.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffd23f'/%3E%3Cpath d='M3 13V6h2V4h6v2h2v7h-3V9H6v4z' fill='%23000'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&amp;family=Press+Start+2P&amp;family=VT323&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="topbar">
+  <a class="logo" href="index.html" aria-label="Kembali ke beranda">AH</a>
+  <nav aria-label="Menu utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="gamedev.html">Game Dev</a></li>
+      <li><a href="3d.html" aria-current="page">3D</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="pagehead pagehead--3d" aria-labelledby="page-title">
+    <span class="doodle heart" style="--k:1.2;right:8%;top:14%" aria-hidden="true"></span>
+    <span class="doodle coin" style="--k:.8;right:20%;top:52%" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Beranda</a> / 3D</p>
+      <h1 id="page-title"><span class="big">3D</span><span class="sub">General</span></h1>
+      <p class="bubble">Model, lingkungan, pencahayaan, dan animasi. Sebagian dibuat untuk game, sisanya latihan membangun dunia dari nol.</p>
+      <ul class="jump" aria-label="Loncat ke bagian"><li><a href="#arsitektur">Arsitektur</a></li><li><a href="#lingkungan">Lingkungan</a></li><li><a href="#catur">Catur 3D</a></li><li><a href="#gerak">Gerak dan gaya render</a></li></ul>
+    </div>
+  </section>
+
+  <section id="arsitektur" class="band band--sun" aria-labelledby="arsitektur-title">
+    <div class="wrap">
+      <h2 id="arsitektur-title">Arsitektur</h2>
+      <p class="lede">Bangunan nyata dibangun ulang dalam 3D. Foto referensi diberi label supaya jelas mana yang referensi dan mana hasil modelku.</p>
+      <h3 class="group">Gerbang UMM</h3>
+      <div class="compare">
+        <figure class="pin"><a class="shot" href="#lb-1" aria-label="Perbesar gambar: Model 3D gerbang Universitas Muhammadiyah Malang berwarna putih dengan atap tumpang"><img src="assets/img/umm-recreate-3d/1.webp" width="1280" height="720" alt="Model 3D gerbang Universitas Muhammadiyah Malang berwarna putih dengan atap tumpang" loading="lazy" decoding="async"></a><figcaption><b>Model polos</b>Gerbang berbentuk dua tiang dengan atap tumpang, dirender tanpa warna untuk memeriksa bentuk.</figcaption></figure>
+        <figure class="pin"><a class="shot" href="#lb-2" aria-label="Perbesar gambar: Gerbang Universitas Muhammadiyah Malang dengan dua mobil off-road di jalan depannya"><img src="assets/img/umm-recreate-3d/3.webp" width="1280" height="720" alt="Gerbang Universitas Muhammadiyah Malang dengan dua mobil off-road di jalan depannya" loading="lazy" decoding="async"></a><figcaption><b>Dengan suasana</b>Latar langit senja dan dua mobil off-road di jalan depan gerbang.</figcaption></figure>
+      </div>
+      <h3 class="group">Ruko Pertokoan</h3>
+      <div class="compare">
+        <figure class="pin"><a class="shot" href="#lb-3" aria-label="Perbesar gambar: Foto referensi deretan ruko dua lantai dengan panel warna merah, kuning, dan biru"><span class="badge badge--ref">REFERENSI</span><img src="assets/img/skema-ruko-pertokoan/reff-ruko.webp" width="900" height="497" alt="Foto referensi deretan ruko dua lantai dengan panel warna merah, kuning, dan biru" loading="lazy" decoding="async"></a><figcaption><b>Foto referensi</b>Ruko dua lantai dengan panel merah, kuning, dan biru sebagai patokan model.</figcaption></figure>
+        <figure class="pin"><a class="shot" href="#lb-4" aria-label="Perbesar gambar: Render 3D deretan ruko dua lantai dengan panel warna yang sama"><span class="badge">MODEL 3D</span><img src="assets/img/skema-ruko-pertokoan/1.webp" width="1280" height="720" alt="Render 3D deretan ruko dua lantai dengan panel warna yang sama" loading="lazy" decoding="async"></a><figcaption><b>Hasil model 3D</b>Panel warna dan jendela dibangun ulang mengikuti foto referensi.</figcaption></figure>
+      </div>
+      <div class="wall">
+<figure class="pin"><a class="shot" href="#lb-5" aria-label="Perbesar gambar: Deretan ruko dilihat dari sudut rendah dengan cahaya hangat"><img src="assets/img/skema-ruko-pertokoan/2.webp" width="1280" height="720" alt="Deretan ruko dilihat dari sudut rendah dengan cahaya hangat" loading="lazy" decoding="async"></a><figcaption><b>Sudut rendah</b>Pencahayaan hangat menyusuri deretan ruko.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-6" aria-label="Perbesar gambar: Skema tata letak ruko di atas citra lokasi, lengkap dengan area parkir dan plaza kiosk"><img src="assets/img/skema-ruko-pertokoan/schema.webp" width="1280" height="680" alt="Skema tata letak ruko di atas citra lokasi, lengkap dengan area parkir dan plaza kiosk" loading="lazy" decoding="async"></a><figcaption><b>Skema tata letak</b>Enam unit ruko, area parkir mobil dan motor, serta plaza kiosk di atas citra lokasi.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-7" aria-label="Perbesar gambar: Model ruko dengan lahan berwarna cokelat dilihat dari atas"><img src="assets/img/skema-ruko-pertokoan/untitled.webp" width="1280" height="720" alt="Model ruko dengan lahan berwarna cokelat dilihat dari atas" loading="lazy" decoding="async"></a><figcaption><b>Tahap lahan</b>Ruko di atas lahan sebelum diberi tekstur akhir.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-8" aria-label="Perbesar gambar: Enam unit ruko terpisah dilihat dari atas di lahan putih"><img src="assets/img/skema-ruko-pertokoan/3.webp" width="1280" height="720" alt="Enam unit ruko terpisah dilihat dari atas di lahan putih" loading="lazy" decoding="async"></a><figcaption><b>Enam unit</b>Tata letak awal dengan unit yang masih terpisah.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-9" aria-label="Perbesar gambar: Deretan ruko menyambung dilihat dari atas di lahan putih"><img src="assets/img/skema-ruko-pertokoan/4.webp" width="1280" height="720" alt="Deretan ruko menyambung dilihat dari atas di lahan putih" loading="lazy" decoding="async"></a><figcaption><b>Unit menyambung</b>Versi tata letak dengan unit yang menyambung.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="lingkungan" class="band band--night" aria-labelledby="lingkungan-title">
+    <div class="wrap">
+      <h2 id="lingkungan-title">Lingkungan</h2>
+      <p class="lede">Dunia untuk game dan studi gaya seni: arena, kota malam, dan bukit.</p>
+      <div class="wall">
+<figure class="pin"><a class="shot" href="#lb-10" aria-label="Perbesar gambar: Arena putih dilihat dari atas dengan rumpun pohon lebat dan dinding batu"><img src="assets/img/war-game-in-area/from-the-top.webp" width="1280" height="720" alt="Arena putih dilihat dari atas dengan rumpun pohon lebat dan dinding batu" loading="lazy" decoding="async"></a><figcaption><b>Arena dari atas</b>Dataran putih, rumpun pohon, dan dinding batu untuk game perang.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-11" aria-label="Perbesar gambar: Arena dengan pohon, dinding batu, dan patung kecil dilihat dari sudut miring"><img src="assets/img/war-game-in-area/untitled.webp" width="1280" height="720" alt="Arena dengan pohon, dinding batu, dan patung kecil dilihat dari sudut miring" loading="lazy" decoding="async"></a><figcaption><b>Sudut miring</b>Pohon dan prop tersebar di sekitar dinding batu.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-12" aria-label="Perbesar gambar: Denah arena kosong dengan dinding batu dan beberapa patung kecil"><img src="assets/img/war-game-in-area/map1.webp" width="1280" height="720" alt="Denah arena kosong dengan dinding batu dan beberapa patung kecil" loading="lazy" decoding="async"></a><figcaption><b>Denah kosong</b>Tata letak dinding dan prop sebelum pohon ditanam.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-13" aria-label="Perbesar gambar: Siluet kota malam dengan gedung berjendela kuning di tepi kolam renang"><img src="assets/img/city-vice-style/untitled.webp" width="1280" height="720" alt="Siluet kota malam dengan gedung berjendela kuning di tepi kolam renang" loading="lazy" decoding="async"></a><figcaption><b>Skyline gaya Vice City</b>Gedung bercahaya, pohon siluet, dan kolam renang di tepi air.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-14" aria-label="Perbesar gambar: Gereja kecil di atas bukit hijau saat malam dengan jalan setapak berkelok"><img src="assets/img/caterdal-art-style/8ebd353c3217e7010ae147c19051f783.webp" width="1280" height="720" alt="Gereja kecil di atas bukit hijau saat malam dengan jalan setapak berkelok" loading="lazy" decoding="async"></a><figcaption><b>Studi gaya: gereja di bukit</b>Bukit low-poly, jalan setapak berkelok, dan gereja bercahaya di malam hari.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="catur" class="band band--sky" aria-labelledby="catur-title">
+    <div class="wrap">
+      <h2 id="catur-title">Catur 3D</h2>
+      <p class="lede">Konsep catur 3D di dunia terbuka. Fokusnya pada material bidak, pencahayaan meja, dan sudut kamera.</p>
+      <div class="wall">
+<figure class="pin"><a class="shot" href="#lb-15" aria-label="Perbesar gambar: Papan catur klasik dengan bidak gading dan hitam"><img src="assets/img/chess-game-3d-openworld/catur2.webp" width="1280" height="720" alt="Papan catur klasik dengan bidak gading dan hitam" loading="lazy" decoding="async"></a><figcaption><b>Papan klasik</b>Bidak gading dan hitam di papan kayu.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-16" aria-label="Perbesar gambar: Papan catur di atas meja bundar toska di ruangan gelap"><img src="assets/img/chess-game-3d-openworld/catur3.webp" width="1280" height="720" alt="Papan catur di atas meja bundar toska di ruangan gelap" loading="lazy" decoding="async"></a><figcaption><b>Meja bundar</b>Papan di atas meja toska dengan latar gelap.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-17" aria-label="Perbesar gambar: Meja catur toska diapit dua kursi kaca merah dan biru"><img src="assets/img/chess-game-3d-openworld/catur3sorotmeja.webp" width="1280" height="720" alt="Meja catur toska diapit dua kursi kaca merah dan biru" loading="lazy" decoding="async"></a><figcaption><b>Dua kursi</b>Kursi merah dan biru dari kaca mengapit meja.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-18" aria-label="Perbesar gambar: Bidak catur kaca bening dilihat dari dekat di papan cokelat"><img src="assets/img/chess-game-3d-openworld/catur3papanbawah.webp" width="1280" height="720" alt="Bidak catur kaca bening dilihat dari dekat di papan cokelat" loading="lazy" decoding="async"></a><figcaption><b>Bidak kaca</b>Bidak kaca bening dari sudut rendah.</figcaption></figure>
+      </div>
+      <p class="span-note" style="margin-top:1rem"><a class="btn btn--alt" href="code.html#catur">Lihat logika papannya</a></p>
+    </div>
+  </section>
+
+  <section id="gerak" class="band band--pink" aria-labelledby="gerak-title">
+    <div class="wrap">
+      <h2 id="gerak-title">Gerak dan Gaya Render</h2>
+      <p class="lede">Satu adegan dirender dengan gaya berbeda, plus animasi pendek untuk menguji kamera dan pencahayaan.</p>
+      <div class="wall">
+<figure class="pin"><a class="shot" href="#lb-19" aria-label="Perbesar gambar: Kamar tidur hangat dengan pesawat kertas di atas meja, render normal"><img src="assets/img/paper-plane-game/normal-huge-pics.webp" width="1280" height="720" alt="Kamar tidur hangat dengan pesawat kertas di atas meja, render normal" loading="lazy" decoding="async"></a><figcaption><b>Render normal</b>Adegan kamar yang sama, dirender dengan material biasa.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-20" aria-label="Perbesar gambar: Kamar tidur yang sama dengan gaya gambar Grease Pencil"><img src="assets/img/paper-plane-game/grece-pencil.webp" width="1280" height="720" alt="Kamar tidur yang sama dengan gaya gambar Grease Pencil" loading="lazy" decoding="async"></a><figcaption><b>Gaya Grease Pencil</b>Adegan yang sama dengan nuansa gambar tangan.</figcaption></figure>
+<figure class="pin"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/paperplane-octane.webp"><source src="assets/vid/paperplane-octane.mp4" type="video/mp4"></video><figcaption><b>Uji render Octane</b>Pesawat kertas melayang di ruang gelap.</figcaption></figure>
+<figure class="pin"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/candy-render.webp"><source src="assets/vid/candy-render.mp4" type="video/mp4"></video><figcaption><b>Lintasan permen dari atas</b>Kamera menyusuri lintasan berliku di atas sungai.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-21" aria-label="Perbesar gambar: Truk berwarna-warni dengan lampu menyala di lintasan permen"><img src="assets/img/candy-car-race/3.webp" width="1280" height="720" alt="Truk berwarna-warni dengan lampu menyala di lintasan permen" loading="lazy" decoding="async"></a><figcaption><b>Truk permen</b>Truk dengan lampu menyala di lintasan.</figcaption></figure>
+<figure class="pin"><a class="shot" href="#lb-22" aria-label="Perbesar gambar: Truk kecil di lintasan melengkung bergaris dilihat dari jauh"><img src="assets/img/candy-car-race/1.webp" width="1280" height="720" alt="Truk kecil di lintasan melengkung bergaris dilihat dari jauh" loading="lazy" decoding="async"></a><figcaption><b>Lintasan melengkung</b>Lintasan bergaris dilihat dari jauh.</figcaption></figure>
+      </div>
+      <div class="nextpage" style="margin-top:3rem">
+        <p>Lanjut jelajah</p>
+        <a class="btn" href="gamedev.html">Lihat Game Dev</a>
+        <a class="btn btn--alt" href="code.html">Lihat Code</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox gambar: CSS murni lewat :target -->
+<div class="lb" id="lb-1" role="dialog" aria-label="Model 3D gerbang Universitas Muhammadiyah Malang berwarna putih dengan atap tumpang">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/umm-recreate-3d/1.webp" width="1280" height="720" alt="Model 3D gerbang Universitas Muhammadiyah Malang berwarna putih dengan atap tumpang" loading="lazy"><figcaption>Model polos. Gerbang berbentuk dua tiang dengan atap tumpang, dirender tanpa warna untuk memeriksa bentuk.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-2" role="dialog" aria-label="Gerbang Universitas Muhammadiyah Malang dengan dua mobil off-road di jalan depannya">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/umm-recreate-3d/3.webp" width="1280" height="720" alt="Gerbang Universitas Muhammadiyah Malang dengan dua mobil off-road di jalan depannya" loading="lazy"><figcaption>Dengan suasana. Latar langit senja dan dua mobil off-road di jalan depan gerbang.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-3" role="dialog" aria-label="Foto referensi deretan ruko dua lantai dengan panel warna merah, kuning, dan biru">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/reff-ruko.webp" width="900" height="497" alt="Foto referensi deretan ruko dua lantai dengan panel warna merah, kuning, dan biru" loading="lazy"><figcaption>Foto referensi. Ruko dua lantai dengan panel merah, kuning, dan biru sebagai patokan model.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-4" role="dialog" aria-label="Render 3D deretan ruko dua lantai dengan panel warna yang sama">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/1.webp" width="1280" height="720" alt="Render 3D deretan ruko dua lantai dengan panel warna yang sama" loading="lazy"><figcaption>Hasil model 3D. Panel warna dan jendela dibangun ulang mengikuti foto referensi.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-5" role="dialog" aria-label="Deretan ruko dilihat dari sudut rendah dengan cahaya hangat">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/2.webp" width="1280" height="720" alt="Deretan ruko dilihat dari sudut rendah dengan cahaya hangat" loading="lazy"><figcaption>Sudut rendah. Pencahayaan hangat menyusuri deretan ruko.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-6" role="dialog" aria-label="Skema tata letak ruko di atas citra lokasi, lengkap dengan area parkir dan plaza kiosk">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/schema.webp" width="1280" height="680" alt="Skema tata letak ruko di atas citra lokasi, lengkap dengan area parkir dan plaza kiosk" loading="lazy"><figcaption>Skema tata letak. Enam unit ruko, area parkir mobil dan motor, serta plaza kiosk di atas citra lokasi.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-7" role="dialog" aria-label="Model ruko dengan lahan berwarna cokelat dilihat dari atas">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/untitled.webp" width="1280" height="720" alt="Model ruko dengan lahan berwarna cokelat dilihat dari atas" loading="lazy"><figcaption>Tahap lahan. Ruko di atas lahan sebelum diberi tekstur akhir.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-8" role="dialog" aria-label="Enam unit ruko terpisah dilihat dari atas di lahan putih">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/3.webp" width="1280" height="720" alt="Enam unit ruko terpisah dilihat dari atas di lahan putih" loading="lazy"><figcaption>Enam unit. Tata letak awal dengan unit yang masih terpisah.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-9" role="dialog" aria-label="Deretan ruko menyambung dilihat dari atas di lahan putih">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/skema-ruko-pertokoan/4.webp" width="1280" height="720" alt="Deretan ruko menyambung dilihat dari atas di lahan putih" loading="lazy"><figcaption>Unit menyambung. Versi tata letak dengan unit yang menyambung.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-10" role="dialog" aria-label="Arena putih dilihat dari atas dengan rumpun pohon lebat dan dinding batu">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/war-game-in-area/from-the-top.webp" width="1280" height="720" alt="Arena putih dilihat dari atas dengan rumpun pohon lebat dan dinding batu" loading="lazy"><figcaption>Arena dari atas. Dataran putih, rumpun pohon, dan dinding batu untuk game perang.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-11" role="dialog" aria-label="Arena dengan pohon, dinding batu, dan patung kecil dilihat dari sudut miring">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/war-game-in-area/untitled.webp" width="1280" height="720" alt="Arena dengan pohon, dinding batu, dan patung kecil dilihat dari sudut miring" loading="lazy"><figcaption>Sudut miring. Pohon dan prop tersebar di sekitar dinding batu.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-12" role="dialog" aria-label="Denah arena kosong dengan dinding batu dan beberapa patung kecil">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/war-game-in-area/map1.webp" width="1280" height="720" alt="Denah arena kosong dengan dinding batu dan beberapa patung kecil" loading="lazy"><figcaption>Denah kosong. Tata letak dinding dan prop sebelum pohon ditanam.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-13" role="dialog" aria-label="Siluet kota malam dengan gedung berjendela kuning di tepi kolam renang">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/city-vice-style/untitled.webp" width="1280" height="720" alt="Siluet kota malam dengan gedung berjendela kuning di tepi kolam renang" loading="lazy"><figcaption>Skyline gaya Vice City. Gedung bercahaya, pohon siluet, dan kolam renang di tepi air.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-14" role="dialog" aria-label="Gereja kecil di atas bukit hijau saat malam dengan jalan setapak berkelok">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/caterdal-art-style/8ebd353c3217e7010ae147c19051f783.webp" width="1280" height="720" alt="Gereja kecil di atas bukit hijau saat malam dengan jalan setapak berkelok" loading="lazy"><figcaption>Studi gaya: gereja di bukit. Bukit low-poly, jalan setapak berkelok, dan gereja bercahaya di malam hari.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-15" role="dialog" aria-label="Papan catur klasik dengan bidak gading dan hitam">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/chess-game-3d-openworld/catur2.webp" width="1280" height="720" alt="Papan catur klasik dengan bidak gading dan hitam" loading="lazy"><figcaption>Papan klasik. Bidak gading dan hitam di papan kayu.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-16" role="dialog" aria-label="Papan catur di atas meja bundar toska di ruangan gelap">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/chess-game-3d-openworld/catur3.webp" width="1280" height="720" alt="Papan catur di atas meja bundar toska di ruangan gelap" loading="lazy"><figcaption>Meja bundar. Papan di atas meja toska dengan latar gelap.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-17" role="dialog" aria-label="Meja catur toska diapit dua kursi kaca merah dan biru">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/chess-game-3d-openworld/catur3sorotmeja.webp" width="1280" height="720" alt="Meja catur toska diapit dua kursi kaca merah dan biru" loading="lazy"><figcaption>Dua kursi. Kursi merah dan biru dari kaca mengapit meja.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-18" role="dialog" aria-label="Bidak catur kaca bening dilihat dari dekat di papan cokelat">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/chess-game-3d-openworld/catur3papanbawah.webp" width="1280" height="720" alt="Bidak catur kaca bening dilihat dari dekat di papan cokelat" loading="lazy"><figcaption>Bidak kaca. Bidak kaca bening dari sudut rendah.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-19" role="dialog" aria-label="Kamar tidur hangat dengan pesawat kertas di atas meja, render normal">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/paper-plane-game/normal-huge-pics.webp" width="1280" height="720" alt="Kamar tidur hangat dengan pesawat kertas di atas meja, render normal" loading="lazy"><figcaption>Render normal. Adegan kamar yang sama, dirender dengan material biasa.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-20" role="dialog" aria-label="Kamar tidur yang sama dengan gaya gambar Grease Pencil">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/paper-plane-game/grece-pencil.webp" width="1280" height="720" alt="Kamar tidur yang sama dengan gaya gambar Grease Pencil" loading="lazy"><figcaption>Gaya Grease Pencil. Adegan yang sama dengan nuansa gambar tangan.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-21" role="dialog" aria-label="Truk berwarna-warni dengan lampu menyala di lintasan permen">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/candy-car-race/3.webp" width="1280" height="720" alt="Truk berwarna-warni dengan lampu menyala di lintasan permen" loading="lazy"><figcaption>Truk permen. Truk dengan lampu menyala di lintasan.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-22" role="dialog" aria-label="Truk kecil di lintasan melengkung bergaris dilihat dari jauh">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/candy-car-race/1.webp" width="1280" height="720" alt="Truk kecil di lintasan melengkung bergaris dilihat dari jauh" loading="lazy"><figcaption>Lintasan melengkung. Lintasan bergaris dilihat dari jauh.</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+
+<footer class="foot">
+  <p>Dibuat dengan HTML dan CSS murni.</p>
+  <p>Abubakar Hadun, NIM 202410370110477</p>
+  <p>Tugas 1 Pemrograman Web, Informatika UMM, 2026</p>
+</footer>
+</body>
+</html>

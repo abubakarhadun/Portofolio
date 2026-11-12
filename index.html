@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abubakar Hadun | Game Dev, 3D, dan Code</title>
+<meta name="description" content="Portofolio Abubakar Hadun, indie game developer: Unity, Unreal Engine, game physics, 3D, dan kode. Dibagi jadi halaman Game Dev, 3D, dan Code.">
+<meta name="theme-color" content="#2b1f6e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abubakar Hadun | Game Dev, 3D, dan Code">
+<meta property="og:description" content="Portofolio Abubakar Hadun, indie game developer: Unity, Unreal Engine, game physics, 3D, dan kode. Dibagi jadi halaman Game Dev, 3D, dan Code.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffd23f'/%3E%3Cpath d='M3 13V6h2V4h6v2h2v7h-3V9H6v4z' fill='%23000'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&amp;family=Press+Start+2P&amp;family=VT323&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="topbar">
+  <a class="logo" href="#home" aria-label="Kembali ke beranda">AH</a>
+  <nav aria-label="Menu utama">
+    <ul>
+      <li><a href="#about">Profil</a></li>
+      <li><a href="#skills">Skill</a></li>
+      <li><a href="gamedev.html">Game Dev</a></li>
+      <li><a href="3d.html">3D</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO: parallax 2D + kubus 3D -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="scene" aria-hidden="true">
+      <span class="stars"></span>
+      <span class="sun px" style="--y:30vh"></span>
+      <div class="clouds px" style="--y:-12vh">
+        <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+      </div>
+      <span class="mtn m1 px" style="--y:14vh"></span>
+      <span class="mtn m2 px" style="--y:8vh"></span>
+      <div class="ground px" style="--y:-2vh">
+        <span class="tree t1"></span><span class="tree t2"></span>
+      </div>
+    </div>
+
+    <div class="hero__body px" style="--y:-8vh">
+      <h1 id="hero-title">
+        <span class="top"><span>Abubakar</span> <span>Hadun</span></span>
+        <span class="big"><span>Game</span> <span>Dev</span></span>
+      </h1>
+      <p class="bubble">Indie game developer yang menguasai Unity dan Unreal Engine. Aku membangun fisika, sistem, dan skrip gameplay, lalu menyatukannya dengan aset 3D.</p>
+      <p class="actions">
+        <a class="btn" href="#paths">Mulai main</a>
+        <a class="btn btn--alt" href="#about">Lihat profil</a>
+      </p>
+      <div class="stage" aria-hidden="true">
+        <div class="cube">
+          <span class="f1">C#</span><span class="f2">BP</span><span class="f3">PY</span>
+          <span class="f4">JS</span><span class="f5">JV</span><span class="f6">3D</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="about" class="band band--sun" aria-labelledby="about-title">
+    <span class="doodle heart" style="--k:1.4;left:6%;top:12%" aria-hidden="true"></span>
+    <span class="doodle coin" style="--k:.8;right:8%;top:20%" aria-hidden="true"></span>
+    <div class="wrap">
+      <h2 id="about-title">Player Profile</h2>
+      <div class="about-grid">
+        <figure class="card card3d avatar">
+          <svg viewBox="0 0 16 16" shape-rendering="crispEdges" role="img" aria-label="Avatar pixel art seorang developer memakai headset">
+            <rect x="4" y="1" width="8" height="3" fill="#3b2314"/>
+            <rect x="4" y="4" width="8" height="5" fill="#f4b183"/>
+            <rect x="3" y="3" width="1" height="4" fill="#3ad1e8"/>
+            <rect x="12" y="3" width="1" height="4" fill="#3ad1e8"/>
+            <rect x="6" y="6" width="1" height="2" fill="#000"/>
+            <rect x="9" y="6" width="1" height="2" fill="#000"/>
+            <rect x="7" y="8" width="2" height="1" fill="#000"/>
+            <rect x="3" y="9" width="10" height="5" fill="#ff5d8f"/>
+            <rect x="2" y="10" width="1" height="3" fill="#f4b183"/>
+            <rect x="13" y="10" width="1" height="3" fill="#f4b183"/>
+            <rect x="5" y="14" width="2" height="2" fill="#2b1f6e"/>
+            <rect x="9" y="14" width="2" height="2" fill="#2b1f6e"/>
+          </svg>
+          <figcaption>Class: Indie Game Dev</figcaption>
+        </figure>
+        <div class="card card3d">
+          <p>Mahasiswa Informatika yang jatuh cinta pada proses membuat game, dari menyetel fisika kendaraan sampai merancang sistem gameplay. Aku suka belajar sambil praktik langsung di engine.</p>
+          <dl class="stats">
+            <dt>Nama</dt><dd>Abubakar Hadun</dd>
+            <dt>NIM</dt><dd>202410370110477</dd>
+            <dt>Kampus</dt><dd>Informatika, Universitas Muhammadiyah Malang</dd>
+            <dt>Engine</dt><dd>Unity dan Unreal Engine</dd>
+            <dt>Fokus</dt><dd>Game physics, game systems, gameplay scripting, 3D</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skills" class="band band--night" aria-labelledby="skills-title">
+    <span class="doodle coin" style="--k:1.2;left:5%;top:30%" aria-hidden="true"></span>
+    <span class="doodle heart" style="--k:.7;right:7%;top:60%" aria-hidden="true"></span>
+    <div class="wrap">
+      <h2 id="skills-title">Skill Tree</h2>
+
+      <h3 class="group">Engine</h3>
+      <div class="grid grid--2">
+        <article class="card card3d cart cart--unity">
+          <h4>Unity</h4>
+          <p>Prototipe cepat, skrip C#, dan kontrol karakter atau kendaraan.</p>
+        </article>
+        <article class="card card3d cart cart--unreal">
+          <h4>Unreal Engine</h4>
+          <p>Fisika Chaos, Blueprint, dan alur kerja aset 3D.</p>
+        </article>
+      </div>
+
+      <h3 class="group">Kemampuan game dev</h3>
+      <ul class="chips">
+        <li>Game Development</li>
+        <li>Game Physics</li>
+        <li>Game Systems</li>
+        <li>Gameplay Scripting</li>
+        <li>3D Modeling</li>
+      </ul>
+
+      <h3 class="group">3D dan render</h3>
+      <ul class="chips">
+        <li>Blender</li>
+        <li>Eevee</li>
+        <li>Octane</li>
+        <li>Grease Pencil</li>
+      </ul>
+
+      <h3 class="group">Bahasa pemrograman</h3>
+      <ul class="chips chips--code">
+        <li>C#</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Blueprint</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- JALUR: tiga halaman portofolio -->
+  <section id="paths" class="band band--sky" aria-labelledby="paths-title">
+    <span class="doodle heart" style="--k:1.1;right:5%;top:10%" aria-hidden="true"></span>
+    <div class="wrap">
+      <h2 id="paths-title">Pilih Jalur</h2>
+      <p class="lede">Portofolio dibagi jadi tiga halaman. Pilih yang paling dekat dengan kebutuhanmu.</p>
+      <div class="grid grid--3">
+        <article class="card card3d path path--game">
+          <div class="path__pic"><img src="assets/img/candy-car-race/front-cam.webp" width="1280" height="855" alt="" loading="lazy" decoding="async"></div>
+          <div class="path__body">
+            <h3>Game Dev Designer</h3>
+            <p>Game dan prototipe: Pixel Odyssey, Game Perang Meriam, Paper Plane, simulasi kendaraan, dan dokumen desain.</p>
+            <a class="btn" href="gamedev.html">Buka Game Dev</a>
+          </div>
+        </article>
+        <article class="card card3d path path--3d">
+          <div class="path__pic"><img src="assets/img/umm-recreate-3d/3.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+          <div class="path__body">
+            <h3>3D General</h3>
+            <p>Arsitektur, lingkungan game, catur 3D, dan eksperimen gaya render.</p>
+            <a class="btn" href="3d.html">Buka 3D</a>
+          </div>
+        </article>
+        <article class="card card3d path path--code">
+          <div class="path__pic"><pre aria-hidden="true"><span class="c">// HP ke Unreal Engine</span>
+<span class="k">const</span> wss = <span class="k">new</span> WebSocketServer(
+  { port: 8889 });
+wss.on(<span class="s">'connection'</span>, ws =&gt;
+  ws.on(<span class="s">'message'</span>, m =&gt;
+    udp.send(m, 8888, <span class="s">'127.0.0.1'</span>)));</pre></div>
+          <div class="path__body">
+            <h3>Code Base</h3>
+            <p>Jembatan HP ke Unreal Engine, logika catur, debugging Unity, dan proyek web serta mobile.</p>
+            <a class="btn" href="code.html">Buka Code</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="contact" class="band band--pink" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Join Server</h2>
+      <address class="card card3d contact">
+        <p>Tertarik berkolaborasi di proyek game? Hubungi aku lewat:</p>
+        <ul>
+          <li><a href="https://github.com/abubakarhadun" rel="noopener">GitHub</a></li>
+          <!-- TODO: isi email asli, lalu hapus tanda komentar pada baris di bawah
+          <li><a href="mailto:EMAIL_KAMU">EMAIL_KAMU</a></li>
+          -->
+          <!-- TODO: isi akun itch.io (kalau ada), lalu hapus tanda komentar
+          <li><a href="https://AKUN_KAMU.itch.io" rel="noopener">itch.io</a></li>
+          -->
+        </ul>
+      </address>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Dibuat dengan HTML dan CSS murni.</p>
+  <p>Abubakar Hadun, NIM 202410370110477</p>
+  <p>Tugas 1 Pemrograman Web, Informatika UMM, 2026</p>
+</footer>
+</body>
+</html>

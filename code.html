@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code Base | Abubakar Hadun</title>
+<meta name="description" content="Kode karya Abubakar Hadun: jembatan HP ke Unreal Engine dengan Node.js, logika catur Python, debugging Unity C#, Oracle, dan aplikasi Android.">
+<meta name="theme-color" content="#2b1f6e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Code Base | Abubakar Hadun">
+<meta property="og:description" content="Kode karya Abubakar Hadun: jembatan HP ke Unreal Engine dengan Node.js, logika catur Python, debugging Unity C#, Oracle, dan aplikasi Android.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffd23f'/%3E%3Cpath d='M3 13V6h2V4h6v2h2v7h-3V9H6v4z' fill='%23000'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&amp;family=Press+Start+2P&amp;family=VT323&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="topbar">
+  <a class="logo" href="index.html" aria-label="Kembali ke beranda">AH</a>
+  <nav aria-label="Menu utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="gamedev.html">Game Dev</a></li>
+      <li><a href="3d.html">3D</a></li>
+      <li><a href="code.html" aria-current="page">Code</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="pagehead pagehead--code" aria-labelledby="page-title">
+    <span class="doodle heart" style="--k:1.2;right:8%;top:14%" aria-hidden="true"></span>
+    <span class="doodle coin" style="--k:.8;right:20%;top:52%" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Beranda</a> / Code</p>
+      <h1 id="page-title"><span class="big">Code</span><span class="sub">Base</span></h1>
+      <p class="bubble">Kode yang kutulis: jembatan jaringan untuk game, logika papan catur, analisis bug, sampai backend dan aplikasi mobile.</p>
+      <ul class="jump" aria-label="Loncat ke bagian"><li><a href="#phone-bridge">Phone Bridge</a></li><li><a href="#catur">Catur</a></li><li><a href="#unity">Debugging Unity</a></li><li><a href="#web-mobile">Web dan Mobile</a></li></ul>
+    </div>
+  </section>
+
+  <section id="game-code" class="band band--night" aria-labelledby="game-code-title">
+    <div class="wrap">
+      <h2 id="game-code-title">Kode untuk Game</h2>
+      <article class="codecase" id="phone-bridge">
+        <div class="codecase__text">
+          <div class="card">
+            <h3>Phone Tracker Bridge</h3>
+            <ul class="tags"><li>Node.js</li><li>WebSocket</li><li>UDP</li><li>Unreal Engine</li></ul>
+            <p>HP jadi kontroler gerak untuk game <a href="gamedev.html#paper-plane">Paper Plane</a>. Halaman web di HP membaca sensor orientasi (DeviceOrientation API) dan mengirim roll, pitch, yaw sebagai JSON pada 60 kali per detik. Ada kalibrasi titik nol supaya posisi pegang HP tidak mengubah arah awal.</p>
+            <p>Server Node.js menerima data lewat WebSocket, lalu meneruskannya sebagai paket UDP ke Unreal Engine di port 8888.</p>
+            <ul class="flow" aria-label="Alur data"><li>HP (PWA)</li><li>WebSocket :8889</li><li>server.js</li><li>UDP :8888</li><li>Unreal Engine</li></ul>
+            <p class="links"><a class="btn btn--alt" href="https://github.com/abubakarhadun/My_Porto/tree/main/data_gameN3d_porto/paper_plane_game/levels/classroom" rel="noopener">Buka di GitHub</a></p>
+          </div>
+        </div>
+        <figure class="term"><div class="term__bar"><i></i><i></i><span>server.js</span></div><pre tabindex="0" aria-label="Kode server.js"><code><span class="k">const</span> udp = dgram.createSocket(<span class="s">'udp4'</span>);
+<span class="k">const</span> wss = <span class="k">new</span> WebSocketServer({ port: 8889 });
+
+wss.on(<span class="s">'connection'</span>, ws =&gt;
+  ws.on(<span class="s">'message'</span>, m =&gt; udp.send(m, 8888, <span class="s">'127.0.0.1'</span>)));</code></pre></figure>
+      </article>
+      <article class="codecase codecase--flip" id="catur">
+        <div class="codecase__text">
+          <div class="card">
+            <h3>Catur dengan Python <span class="wip">Sedang dikerjakan</span></h3>
+            <ul class="tags"><li>Python</li><li>Struktur data</li><li>Logika game</li></ul>
+            <p>Papan catur disimpan sebagai dictionary dari posisi ke bidak: huruf besar untuk putih, huruf kecil untuk hitam. Posisi awal, pencetakan papan, dan input langkah sudah ada. Logika gerak bidak masih kukerjakan.</p>
+            <p>Versi 3D papan dan bidaknya ada di <a href="3d.html#catur">halaman 3D</a>.</p>
+            <p class="links"><a class="btn btn--alt" href="https://github.com/abubakarhadun/My_Porto/tree/main/data_gameN3d_porto/ChessGame.Ai" rel="noopener">Buka di GitHub</a></p>
+          </div>
+        </div>
+        <figure class="term"><div class="term__bar"><i></i><i></i><span>Catur.py</span></div><pre tabindex="0" aria-label="Kode Catur.py"><code><span class="k">def</span> initial_white():
+    <span class="k">return</span> {
+        <span class="s">'a1'</span>: <span class="s">'R'</span>, <span class="s">'b1'</span>: <span class="s">'N'</span>, <span class="s">'c1'</span>: <span class="s">'B'</span>, <span class="s">'d1'</span>: <span class="s">'Q'</span>,
+        <span class="s">'e1'</span>: <span class="s">'K'</span>, <span class="s">'f1'</span>: <span class="s">'B'</span>, <span class="s">'g1'</span>: <span class="s">'N'</span>, <span class="s">'h1'</span>: <span class="s">'R'</span>,
+        <span class="c"># pion putih ...</span>
+    }
+
+<span class="k">def</span> piece_at_start(file_letter, rank):
+    key = f<span class="s">"{file_letter}{rank}"</span>
+    <span class="k">if</span> key <span class="k">in</span> white_positions:
+        <span class="k">return</span> white_positions[key]
+    <span class="k">if</span> key <span class="k">in</span> black_positions:
+        <span class="k">return</span> black_positions[key]
+    <span class="k">return</span> None</code></pre></figure>
+      </article>
+    </div>
+  </section>
+
+  <section id="unity" class="band band--sky" aria-labelledby="unity-title">
+    <div class="wrap">
+      <h2 id="unity-title">Debugging dan Analisis</h2>
+      <article class="codecase" style="margin-bottom:0">
+        <div class="codecase__text">
+          <div class="card">
+            <h3>Unity Car Controller</h3>
+            <ul class="tags"><li>Unity</li><li>C#</li><li>Debugging</li></ul>
+            <p>Aku membedah pengendali mobil berarsitektur Data-Logic-Actor, lalu menemukan dan memperbaiki tiga bug.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tiga bug yang ketemu</h3>
+          <ul class="bugs">
+            <li>Pengali boost bernilai nol, jadi boost tidak pernah menambah kecepatan.</li>
+            <li>Kondisi input terbalik, jadi kontrol bereaksi pada arah yang salah.</li>
+            <li>Hasil CompareTag dibuang, jadi pengecekan tag tidak berpengaruh apa pun.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="web-mobile" class="band band--sun" aria-labelledby="web-mobile-title">
+    <div class="wrap">
+      <h2 id="web-mobile-title">Web dan Mobile</h2>
+      <div class="grid grid--3">
+        <article class="card proto">
+          <h3>Sociaverse</h3>
+          <p>Proyek akhir mata kuliah Basis Data: platform media sosial dengan skema Oracle (tabel, sequence, trigger, view, stored procedure, dan package PL/SQL), backend Node.js dengan Express, dan antarmuka HTML, CSS, JavaScript murni.</p>
+          <ul class="tags"><li>Oracle DB</li><li>Node.js</li><li>Express</li><li>HTML/CSS/JS</li></ul>
+        </article>
+        <article class="card proto">
+          <h3>MemoWallet</h3>
+          <p>Aplikasi memo teks kaya untuk Android berbasis WebView dengan tampilan nostalgia Android Holo. Menu konteks bawaan diganti toolbar kustom, dan beberapa bug editor sudah kuperbaiki, seperti seleksi teks yang hilang saat ukuran font diganti.</p>
+          <ul class="tags"><li>Android</li><li>WebView</li><li>Rich text</li></ul>
+        </article>
+        <article class="card proto">
+          <h3>The Vibe Grid</h3>
+          <p>Halaman katalog film untuk praktikum Pemrograman Web. Data diambil dari API TMDB lewat fetch, dan pencarian mengirim HTTP request ke API, bukan sekadar menyaring data di layar. Dilengkapi koleksi Postman untuk menguji endpoint.</p>
+          <ul class="tags"><li>JavaScript</li><li>DOM</li><li>REST API</li><li>Postman</li></ul>
+        </article>
+      </div>
+      <div class="nextpage" style="margin-top:3rem">
+        <p>Lanjut jelajah</p>
+        <a class="btn" href="gamedev.html">Lihat Game Dev</a>
+        <a class="btn btn--alt" href="3d.html">Lihat 3D</a>
+        <a class="btn btn--alt" href="https://github.com/abubakarhadun/My_Porto" rel="noopener">Repo GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Dibuat dengan HTML dan CSS murni.</p>
+  <p>Abubakar Hadun, NIM 202410370110477</p>
+  <p>Tugas 1 Pemrograman Web, Informatika UMM, 2026</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Dev Designer | Abubakar Hadun</title>
+<meta name="description" content="Game dan prototipe karya Abubakar Hadun: Pixel Odyssey, Game Perang Meriam, Paper Plane, simulasi kendaraan, dan Game Design Document.">
+<meta name="theme-color" content="#2b1f6e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Game Dev Designer | Abubakar Hadun">
+<meta property="og:description" content="Game dan prototipe karya Abubakar Hadun: Pixel Odyssey, Game Perang Meriam, Paper Plane, simulasi kendaraan, dan Game Design Document.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffd23f'/%3E%3Cpath d='M3 13V6h2V4h6v2h2v7h-3V9H6v4z' fill='%23000'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&amp;family=Press+Start+2P&amp;family=VT323&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="topbar">
+  <a class="logo" href="index.html" aria-label="Kembali ke beranda">AH</a>
+  <nav aria-label="Menu utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="gamedev.html" aria-current="page">Game Dev</a></li>
+      <li><a href="3d.html">3D</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="pagehead pagehead--game" aria-labelledby="page-title">
+    <span class="doodle heart" style="--k:1.2;right:8%;top:14%" aria-hidden="true"></span>
+    <span class="doodle coin" style="--k:.8;right:20%;top:52%" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Beranda</a> / Game Dev</p>
+      <h1 id="page-title"><span class="big">Game Dev</span><span class="sub">Designer</span></h1>
+      <p class="bubble">Aku merancang aturan main, kontrol, antarmuka, dan level, lalu mengujinya langsung di engine. Ini game dan prototipe yang sudah kubuat.</p>
+      <ul class="jump" aria-label="Loncat ke bagian"><li><a href="#pixel-odyssey">Pixel Odyssey</a></li><li><a href="#perang-meriam">Game Perang Meriam</a></li><li><a href="#paper-plane">Paper Plane</a></li><li><a href="#prototipe">Prototipe</a></li><li><a href="#fisika">Fisika dan GDD</a></li></ul>
+    </div>
+  </section>
+
+  <section id="utama" class="band band--sky" aria-labelledby="utama-title">
+    <div class="wrap">
+      <h2 id="utama-title">Proyek Utama</h2>
+      <article class="case" id="pixel-odyssey">
+        <div class="case__media">
+          <figure class="frame"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/pixel-map4.webp"><source src="assets/vid/pixel-map4.mp4" type="video/mp4"></video><figcaption>Map kota neon</figcaption></figure>
+          <div class="case__row">
+            <figure class="frame"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/pixel-map3.webp"><source src="assets/vid/pixel-map3.mp4" type="video/mp4"></video><figcaption>Map hutan</figcaption></figure>
+            <figure class="frame"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/pixel-map1.webp"><source src="assets/vid/pixel-map1.mp4" type="video/mp4"></video><figcaption>Map kamar</figcaption></figure>
+            <a class="shot" href="#lb-1" aria-label="Perbesar gambar: Antarmuka game Pixel Odyssey dengan tombol kiri, kanan, dan Jump di atas tumpukan buku"><img src="assets/img/pixeloddesey/button-with-controoller-game-mobile-unityui.webp" width="1280" height="792" alt="Antarmuka game Pixel Odyssey dengan tombol kiri, kanan, dan Jump di atas tumpukan buku" loading="lazy" decoding="async"></a>
+          </div>
+        </div>
+        <div class="card case__body">
+          <h3>Pixel Odyssey</h3>
+          <ul class="tags"><li>2D side-scroller</li><li>Unity</li><li>Kontrol sentuh</li><li>Level design</li></ul>
+          <p>Game 2D dengan lima map bertema: kamar, gurun, hutan, kota neon, dan luar angkasa. Tiap map punya suasana dan karakter sendiri. Latar disusun berlapis supaya terasa punya kedalaman, lalu cuplikan mapnya kurender sebagai video.</p>
+          <p>Kontrolnya dibuat untuk layar sentuh: tombol kiri, kanan, dan Jump yang besar dan mudah dijangkau jempol.</p>
+          <dl class="facts"><dt>Genre</dt><dd>Platformer 2D</dd><dt>Engine</dt><dd>Unity</dd><dt>Fokus</dt><dd>Desain level, UI sentuh, suasana tiap map</dd></dl>
+        </div>
+      </article>
+      <article class="case" id="perang-meriam">
+        <div class="case__media">
+          <figure class="frame"><video controls muted playsinline preload="none" width="960" height="540" poster="assets/vid/clash-timeline.webp"><source src="assets/vid/clash-timeline.mp4" type="video/mp4"></video><figcaption>Cuplikan arena</figcaption></figure>
+          <div class="case__row">
+            <a class="shot" href="#lb-2" aria-label="Perbesar gambar: Layar intro Game Perang Meriam dengan kolom nama pemain dan tombol Mulai"><img src="assets/img/clashroyale-recreate-towerdefence/ui-inthe-intro.webp" width="1280" height="682" alt="Layar intro Game Perang Meriam dengan kolom nama pemain dan tombol Mulai" loading="lazy" decoding="async"></a>
+            <a class="shot" href="#lb-3" aria-label="Perbesar gambar: Arena tower defense dilihat dari kamera dalam game"><img src="assets/img/clashroyale-recreate-towerdefence/ingamecamera.webp" width="1280" height="720" alt="Arena tower defense dilihat dari kamera dalam game" loading="lazy" decoding="async"></a>
+            <a class="shot" href="#lb-4" aria-label="Perbesar gambar: Menara yang hancur pecah menjadi serpihan"><img src="assets/img/clashroyale-recreate-towerdefence/toweranimation-when-got-destroyed.webp" width="1280" height="720" alt="Menara yang hancur pecah menjadi serpihan" loading="lazy" decoding="async"></a>
+          </div>
+        </div>
+        <div class="card case__body">
+          <h3>Game Perang Meriam</h3>
+          <ul class="tags"><li>Tower defense</li><li>UI intro</li><li>Animasi hancur</li></ul>
+          <p>Rekreasi tower defense bergaya Clash Royale. Arenanya berlantai kotak hijau dengan menara di tiap sisi. Pemain mengisi nama di layar intro, lalu menekan Mulai untuk masuk ke arena.</p>
+          <p>Menara yang hancur pecah menjadi serpihan, supaya pemain langsung paham ada yang berubah di medan.</p>
+          <dl class="facts"><dt>Genre</dt><dd>Tower defense</dd><dt>Fokus</dt><dd>Layar intro, kamera, umpan balik visual saat menara hancur</dd></dl>
+        </div>
+      </article>
+      <article class="case" id="paper-plane">
+        <div class="case__media">
+          <a class="shot" href="#lb-5" aria-label="Perbesar gambar: Level ruang kelas di Unreal Editor dengan pesawat kertas di atas meja"><img src="assets/img/paper-plane-game/phonetracker-unreal-editor-12-11-2026-19-38-10.webp" width="1280" height="800" alt="Level ruang kelas di Unreal Editor dengan pesawat kertas di atas meja" loading="lazy" decoding="async"></a>
+          <a class="shot" href="#lb-6" aria-label="Perbesar gambar: Pesawat kertas dilihat dari dekat di atas meja kelas"><img src="assets/img/paper-plane-game/phonetracker-unreal-editor-12-11-2026-19-39-24.webp" width="1280" height="800" alt="Pesawat kertas dilihat dari dekat di atas meja kelas" loading="lazy" decoding="async"></a>
+        </div>
+        <div class="card case__body">
+          <h3>Paper Plane</h3>
+          <ul class="tags"><li>Unreal Engine 5</li><li>Kontrol gerak HP</li><li>Node.js</li></ul>
+          <p>Pesawat kertas yang digerakkan dengan memiringkan HP. Sensor orientasi HP dikirim ke Unreal Engine lewat jembatan Node.js, dan level pertamanya berlatar ruang kelas.</p>
+          <p>Cara kerja jembatan dan potongan kodenya ada di <a href="code.html#phone-bridge">halaman Code</a>. Render adegan kamarnya ada di <a href="3d.html#gerak">halaman 3D</a>.</p>
+          <dl class="facts"><dt>Engine</dt><dd>Unreal Engine 5</dd><dt>Input</dt><dd>Sensor orientasi HP (roll, pitch, yaw)</dd><dt>Level</dt><dd>Ruang kelas</dd></dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="prototipe" class="band band--sun" aria-labelledby="prototipe-title">
+    <div class="wrap">
+      <h2 id="prototipe-title">Prototipe</h2>
+      <p class="lede">Percobaan yang lebih kecil, masing-masing untuk menguji satu ide: kontrol, kamera, atau suasana.</p>
+      <div class="grid grid--3">
+        <article class="card proto">
+          <div class="shots"><a class="shot" href="#lb-7" aria-label="Perbesar gambar: Mobil dilihat dari belakang di lintasan bertema permen dengan tongkat permen di tepi jalan"><img src="assets/img/candy-car-race/front-cam.webp" width="1280" height="855" alt="Mobil dilihat dari belakang di lintasan bertema permen dengan tongkat permen di tepi jalan" loading="lazy" decoding="async"></a><a class="shot" href="#lb-8" aria-label="Perbesar gambar: Mobil melintasi jembatan di atas sungai saat senja"><img src="assets/img/candy-car-race/water.webp" width="1280" height="834" alt="Mobil melintasi jembatan di atas sungai saat senja" loading="lazy" decoding="async"></a></div>
+          <h3>Candy Car Race</h3>
+          <p>Balapan mobil di lintasan bertema permen: tongkat permen di tepi jalan, deretan pohon, dan jembatan yang melintasi sungai. Kamera mengikuti dari belakang mobil.</p>
+          <ul class="tags"><li>Racing</li><li>Level design</li><li>Kamera</li></ul>
+        </article>
+        <article class="card proto">
+          <div class="shots"><a class="shot" href="#lb-9" aria-label="Perbesar gambar: Mobil pikap low-poly dengan kotak-kotak rintangan di jalan"><img src="assets/img/lowpoly-car-obstacle/screenshot-2026-11-12-171613.webp" width="822" height="354" alt="Mobil pikap low-poly dengan kotak-kotak rintangan di jalan" loading="lazy" decoding="async"></a><a class="shot" href="#lb-10" aria-label="Perbesar gambar: Level kedua game mobil low-poly di editor"><img src="assets/img/lowpoly-car-obstacle/level2-lowpoly-game-plane.webp" width="1280" height="1328" alt="Level kedua game mobil low-poly di editor" loading="lazy" decoding="async"></a></div>
+          <h3>Low-poly Car Obstacle</h3>
+          <p>Mobil low-poly yang harus melewati rintangan kotak di jalan. Layar debug menampilkan nilai gerak dan putaran (ValueMove dan ValueRotation) untuk menyetel kontrol. Level kedua sudah dibuat.</p>
+          <ul class="tags"><li>Low-poly</li><li>Kontrol kendaraan</li><li>Debug UI</li></ul>
+        </article>
+        <article class="card proto">
+          <div class="shots"><a class="shot" href="#lb-11" aria-label="Perbesar gambar: Tampilan kokpit dengan setir dan layar kecil di dalam game"><img src="assets/img/game-uji-sim/in-steering-ongame.webp" width="1280" height="720" alt="Tampilan kokpit dengan setir dan layar kecil di dalam game" loading="lazy" decoding="async"></a><a class="shot" href="#lb-12" aria-label="Perbesar gambar: Peta lintasan uji dilihat dari atas"><img src="assets/img/game-uji-sim/whole-map.webp" width="1280" height="720" alt="Peta lintasan uji dilihat dari atas" loading="lazy" decoding="async"></a></div>
+          <h3>Simulasi Uji SIM</h3>
+          <p>Simulasi uji mengemudi. Pemain melihat dari kokpit dengan setir di depan, sementara seluruh lintasan ujinya bisa dilihat utuh dari atas.</p>
+          <ul class="tags"><li>Simulasi</li><li>Kamera kokpit</li><li>Lintasan uji</li></ul>
+        </article>
+        <article class="card proto">
+          <div class="shots"><a class="shot" href="#lb-13" aria-label="Perbesar gambar: Mobil off-road melaju di jalan saat senja dengan tombol Run di pojok kanan bawah"><img src="assets/img/horor-game/hororgame-styleresident-evil-intro-kinda-like-walkingdead-car-start.webp" width="1280" height="715" alt="Mobil off-road melaju di jalan saat senja dengan tombol Run di pojok kanan bawah" loading="lazy" decoding="async"></a></div>
+          <h3>Game Horor</h3>
+          <p>Adegan pembuka game horor bergaya Resident Evil dengan nuansa The Walking Dead: mobil mulai melaju di jalan saat senja. Baru intro dan tombol Run.</p>
+          <ul class="tags"><li>Horor</li><li>Intro sinematik</li><li>Suasana</li></ul>
+        </article>
+        <article class="card proto">
+          <div class="shots"><a class="shot" href="#lb-14" aria-label="Perbesar gambar: Larva kuning di atas papan sempit dengan kubus merah di ujung jalur"><img src="assets/img/worms-game/larva-tryna-jump.webp" width="1280" height="720" alt="Larva kuning di atas papan sempit dengan kubus merah di ujung jalur" loading="lazy" decoding="async"></a></div>
+          <h3>Worms: Larva Lompat</h3>
+          <p>Prototipe awal untuk menguji lompatan karakter larva kuning di jalur sempit, dengan kubus merah di ujung jalur.</p>
+          <ul class="tags"><li>Platformer</li><li>Prototipe</li></ul>
+        </article>
+        <article class="card proto">
+          
+          <h3>Catur</h3>
+          <p>Catur punya dua sisi di portofolio ini. Render 3D papan dan bidaknya ada di halaman 3D, sedangkan logika papannya ada di halaman Code.</p>
+          <p class="links"><a class="btn btn--alt" href="3d.html#catur">Render 3D</a><a class="btn btn--alt" href="code.html#catur">Kode catur</a></p>
+          <ul class="tags"><li>3D</li><li>Python</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fisika" class="band band--night" aria-labelledby="fisika-title">
+    <div class="wrap">
+      <h2 id="fisika-title">Fisika dan Dokumen</h2>
+      <div class="grid grid--2">
+        <article class="card cart note-card">
+          <h3>G-Wagon Physics Sim</h3>
+          <p>Simulasi kendaraan di Unreal Engine dengan Chaos Vehicles: mesin, transmisi, suspensi, dan rem diatur mengikuti spesifikasi G500 dan G63 AMG. Massa dan pusat massa disetel agar mobil stabil, lalu setir ikut berputar lewat Blueprint.</p>
+          <ul class="tags"><li>Unreal Engine</li><li>Chaos Vehicles</li><li>Blueprint</li></ul>
+        </article>
+        <article class="card cart note-card note-card--b">
+          <h3>Hello World Game</h3>
+          <p>Game Design Document lengkap dengan tangkapan layar antarmuka dan deskripsi tiap fitur dalam bahasa Indonesia.</p>
+          <ul class="tags"><li>Game Design</li><li>Dokumentasi</li></ul>
+        </article>
+      </div>
+      <div class="nextpage" style="margin-top:3rem">
+        <p>Lanjut jelajah</p>
+        <a class="btn" href="3d.html">Lihat 3D</a>
+        <a class="btn btn--alt" href="code.html">Lihat Code</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox gambar: CSS murni lewat :target -->
+<div class="lb" id="lb-1" role="dialog" aria-label="Antarmuka game Pixel Odyssey dengan tombol kiri, kanan, dan Jump di atas tumpukan buku">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/pixeloddesey/button-with-controoller-game-mobile-unityui.webp" width="1280" height="792" alt="Antarmuka game Pixel Odyssey dengan tombol kiri, kanan, dan Jump di atas tumpukan buku" loading="lazy"><figcaption>Kontrol sentuh: tombol kiri, kanan, dan Jump di UI Unity</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-2" role="dialog" aria-label="Layar intro Game Perang Meriam dengan kolom nama pemain dan tombol Mulai">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/clashroyale-recreate-towerdefence/ui-inthe-intro.webp" width="1280" height="682" alt="Layar intro Game Perang Meriam dengan kolom nama pemain dan tombol Mulai" loading="lazy"><figcaption>Layar intro: pemain mengisi nama lalu menekan Mulai</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-3" role="dialog" aria-label="Arena tower defense dilihat dari kamera dalam game">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/clashroyale-recreate-towerdefence/ingamecamera.webp" width="1280" height="720" alt="Arena tower defense dilihat dari kamera dalam game" loading="lazy"><figcaption>Kamera dalam game</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-4" role="dialog" aria-label="Menara yang hancur pecah menjadi serpihan">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/clashroyale-recreate-towerdefence/toweranimation-when-got-destroyed.webp" width="1280" height="720" alt="Menara yang hancur pecah menjadi serpihan" loading="lazy"><figcaption>Menara yang hancur pecah jadi serpihan</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-5" role="dialog" aria-label="Level ruang kelas di Unreal Editor dengan pesawat kertas di atas meja">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/paper-plane-game/phonetracker-unreal-editor-12-11-2026-19-38-10.webp" width="1280" height="800" alt="Level ruang kelas di Unreal Editor dengan pesawat kertas di atas meja" loading="lazy"><figcaption>Level ruang kelas di Unreal Editor</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-6" role="dialog" aria-label="Pesawat kertas dilihat dari dekat di atas meja kelas">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/paper-plane-game/phonetracker-unreal-editor-12-11-2026-19-39-24.webp" width="1280" height="800" alt="Pesawat kertas dilihat dari dekat di atas meja kelas" loading="lazy"><figcaption>Pesawat kertas di atas meja kelas</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-7" role="dialog" aria-label="Mobil dilihat dari belakang di lintasan bertema permen dengan tongkat permen di tepi jalan">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/candy-car-race/front-cam.webp" width="1280" height="855" alt="Mobil dilihat dari belakang di lintasan bertema permen dengan tongkat permen di tepi jalan" loading="lazy"><figcaption>Kamera belakang mobil di lintasan permen</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-8" role="dialog" aria-label="Mobil melintasi jembatan di atas sungai saat senja">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/candy-car-race/water.webp" width="1280" height="834" alt="Mobil melintasi jembatan di atas sungai saat senja" loading="lazy"><figcaption>Jembatan di atas sungai</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-9" role="dialog" aria-label="Mobil pikap low-poly dengan kotak-kotak rintangan di jalan">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/lowpoly-car-obstacle/screenshot-2026-11-12-171613.webp" width="822" height="354" alt="Mobil pikap low-poly dengan kotak-kotak rintangan di jalan" loading="lazy"><figcaption>Mobil dan rintangan kotak</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-10" role="dialog" aria-label="Level kedua game mobil low-poly di editor">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/lowpoly-car-obstacle/level2-lowpoly-game-plane.webp" width="1280" height="1328" alt="Level kedua game mobil low-poly di editor" loading="lazy"><figcaption>Level 2 di editor</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-11" role="dialog" aria-label="Tampilan kokpit dengan setir dan layar kecil di dalam game">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/game-uji-sim/in-steering-ongame.webp" width="1280" height="720" alt="Tampilan kokpit dengan setir dan layar kecil di dalam game" loading="lazy"><figcaption>Kamera kokpit dengan setir</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-12" role="dialog" aria-label="Peta lintasan uji dilihat dari atas">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/game-uji-sim/whole-map.webp" width="1280" height="720" alt="Peta lintasan uji dilihat dari atas" loading="lazy"><figcaption>Peta lintasan uji dari atas</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-13" role="dialog" aria-label="Mobil off-road melaju di jalan saat senja dengan tombol Run di pojok kanan bawah">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/horor-game/hororgame-styleresident-evil-intro-kinda-like-walkingdead-car-start.webp" width="1280" height="715" alt="Mobil off-road melaju di jalan saat senja dengan tombol Run di pojok kanan bawah" loading="lazy"><figcaption>Adegan pembuka: mobil melaju saat senja</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+<div class="lb" id="lb-14" role="dialog" aria-label="Larva kuning di atas papan sempit dengan kubus merah di ujung jalur">
+  <a class="lb__bg" href="#close" aria-label="Tutup"></a>
+  <figure><img src="assets/img/worms-game/larva-tryna-jump.webp" width="1280" height="720" alt="Larva kuning di atas papan sempit dengan kubus merah di ujung jalur" loading="lazy"><figcaption>Larva di jalur sempit</figcaption></figure>
+  <a class="lb__close" href="#close">Tutup</a>
+</div>
+
+<footer class="foot">
+  <p>Dibuat dengan HTML dan CSS murni.</p>
+  <p>Abubakar Hadun, NIM 202410370110477</p>
+  <p>Tugas 1 Pemrograman Web, Informatika UMM, 2026</p>
+</footer>
+</body>
+</html>
